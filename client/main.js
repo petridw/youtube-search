@@ -7,8 +7,15 @@ var App = React.createClass({
   getInitialState: function() {
     return {search_data: {items: []}};
   },
-  onSearchKey: function(query) {
-    youtube.search(query, function(data) {
+  onSearchKey: function(query, location) {
+    var query_obj = {};
+    query_obj.q = query;
+
+    if (location) {
+      query_obj.location = location;
+    }
+
+    youtube.search(query_obj, function(data) {
       console.log(data);
       this.setState({search_data: data});
     }.bind(this));

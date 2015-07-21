@@ -1,13 +1,10 @@
 var React = require('react');
+var youtube = require('./../services/youtube');
 
 var VideoItem = React.createClass({
   render: function() {
-    return (
-      <div className="video">
-        <img src={this.props.data.snippet.thumbnails.high.url} />
-        {this.props.data.snippet.title}
-      </div>
-    );
+    var url = "http://www.youtube.com/embed/" + this.props.data.id.videoId;
+    return <iframe className="ytplayer" type="text/html" width="640" height="390" src={url} frameBorder="0"/>;
   }
 });
 
