@@ -1,0 +1,20 @@
+{
+  "name": "youtube",
+  "version": "0.0.0",
+  "authors": [
+    "davidpetri <petridw@gmail.com>"
+  ],
+  "description": "youtube api hackathon",
+  "main": "client/main.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
